@@ -118,29 +118,22 @@ def game_hash
 end
 
 
-@game_hash[:home][:players].each do |player|
-         
-        if player == player_name
-            puts @game_hash.each [:home][:player][:player_name][:points]
-
-
 def num_points_scored(name)
   points = 0
-  game_hash.each do | teams, team_data |
-  team_data.each do | attributes , values |
-    if attributes == :players
-      names.each do | player_name, stats |
-        if player_name == name
-        stats.each do | stat, num |
-        if stat == :points
-          var = value
+      game_hash.each do | teams, team_data |
+        team_data.each do | attributes , values |
+          if attributes == :players
+          names.each do | player_name, stats |
+            if player_name == name
+            stats.each do | stat, num |
+                if stat == :points
+                  points = num
                 end
              end
            end
          end
        end
     end
-  end
   var
 end
 
