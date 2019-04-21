@@ -191,18 +191,18 @@ end
 def player_numbers(team_name)
    jersey_num_array = []
     if game_hash[:home][:team_name] == team_name
-    game_hash[:home][:players].each do | name, stats|
-      stats.each do | stat_label, stat_value|
-        if stat_label == :number
-          jersey_num_array << stat_value
+    game_hash[:home][:players].each do | player, player_data_hash |
+      player_data_hash.each do | stat, num |
+        if stat == :number
+          jersey_num_array << num
         end
       end
     end
   else 
-    game_hash[:away][:players].each do |name, stats|
-      stats.each do |stat_label, stat_value|
-        if stat_label == :number
-          jersey_num_array << stat_value
+    game_hash[:away][:players].each do | player, player_data_hash |
+      player_data_hash.each do | stat, num |
+        if stat == :number
+          jersey_num_array << num
         end
       end
     end
