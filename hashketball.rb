@@ -173,6 +173,7 @@ def team_colors(team_name)
     elsif game_hash[:away][:team_name] == team_name
       team_colors_array = game_hash[:away][:colors]
     end
+  team_colors_array
 end
 
      
