@@ -179,10 +179,12 @@ end
 def team_names
   team_names_array = []
     game_hash.each do | team, team_data_hash |
-    team_data_hash.each do | attribute, data |
-      if attribute == :team_name
-        team_name_array.push data
+      team_data_hash.each do | attribute, data |
+        if attribute == :team_name
+          team_name_array.push data
+        end
       end
+    end
   team_names_array
 end
 
