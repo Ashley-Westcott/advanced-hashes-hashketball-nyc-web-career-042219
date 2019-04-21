@@ -129,8 +129,8 @@ def num_points_scored(name)
                 if stat == :points
                   points = num
                 end
-             end
-           end
+              end
+            end
          end
        end
     end
