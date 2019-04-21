@@ -117,9 +117,7 @@ def game_hash
   }
 end
 
-
-
-
+Original Solution
 # def num_points_scored(name)
 #   points = 0
 #     game_hash.each do | teams, team_data |
@@ -140,23 +138,6 @@ end
 #   points
 # end
 
-# def num_points_scored(name)
-#   points = 0
-#   game_hash.each do | team, team_data_hash |
-#     team_data_hash[:players].each do | player, player_data_hash |
-#       if player == name
-#         player_data_hash.each do | stat, value |
-#           if stat == :points
-#             value = points
-#         end
-#       end
-#     end
-#   end
-# end
-#   points
-# end
-
-
 def num_points_scored(name)
   game_hash.each do | team, team_data_hash |
     team_data_hash.each do | attribute, data |
@@ -170,6 +151,8 @@ def num_points_scored(name)
     end
   end
 end
+
+
 
 
      
