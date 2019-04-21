@@ -120,28 +120,29 @@ end
 
 
 
-def num_points_scored(name)
-  points = 0
-    game_hash.each do | teams, team_data |
-      team_data.each do | attribute , values |
-        if attribute == :players
-          values.each do | player_name, stats |
-            if player_name == name
-              stats.each do | stat, num |
-                if stat == :points
-                  points = num
-                end
-              end
-            end
-          end
-        end
-      end
-    end
-  points
-end
+# def num_points_scored(name)
+#   points = 0
+#     game_hash.each do | teams, team_data |
+#       team_data.each do | attribute , values |
+#         if attribute == :players
+#           values.each do | player_name, stats |
+#             if player_name == name
+#               stats.each do | stat, num |
+#                 if stat == :points
+#                   points = num
+#                 end
+#               end
+#             end
+#           end
+#         end
+#       end
+#     end
+#   points
+# end
 
 def num_points_scored(name)
-  game_hash.each do | team, team_data_hash|
+  game_hash.each do | team, team_data_hash |
+    binding.pry
     team_data_hash[:players].each do | player, player_data_hash |
       if player_data_hash[:name] == player_name
         return player_hash[:stats][:points]
