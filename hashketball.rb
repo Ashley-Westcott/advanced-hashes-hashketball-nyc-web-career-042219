@@ -117,7 +117,7 @@ def game_hash
   }
 end
 
-Original Solution
+#Original Solution
 # def num_points_scored(name)
 #   points = 0
 #     game_hash.each do | teams, team_data |
