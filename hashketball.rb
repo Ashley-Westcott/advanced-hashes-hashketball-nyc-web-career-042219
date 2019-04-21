@@ -152,7 +152,18 @@ def num_points_scored(name)
   end
 end
 
-
-
+def shoe_size(players_name)
+  game_hash.each do | team, team_data_hash |
+    team_data_hash.each do | attribute, data |
+      if attribute == :players
+        data.each do | player, player_data_hash |
+          if player == name
+            return game_hash[team][attribute][player][:shoe]
+          end
+        end
+      end
+    end
+  end
+end
 
      
