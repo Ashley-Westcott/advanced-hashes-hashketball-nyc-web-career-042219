@@ -171,7 +171,7 @@ def team_colors(team_name)
     if team == team_name
       team_data_hash.each do | attribute, data |
         if attribute == :colors
-          return game_hash[team][attribute][:colors]
+          return game_hash[team][:colors]
         end
       end
     end
