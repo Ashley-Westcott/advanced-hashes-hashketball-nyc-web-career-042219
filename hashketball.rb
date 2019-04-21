@@ -160,7 +160,7 @@ def num_points_scored(name)
   game_hash.each do | team, team_data_hash |
     team_data_hash.each do | player, player_data_hash |
       if player.include?(name) 
-       return game_hash[team][attribute][name][:points]
+       return game_hash[team][player][name][:points]
       end
     end
   end
