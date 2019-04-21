@@ -125,7 +125,7 @@ def num_points_scored(name)
           if attributes == :players
           names.each do | player_name, stats |
             if player_name == name
-            stats.each do | stat, num |
+              stats.each do | stat, num |
                 if stat == :points
                   points = num
                 end
