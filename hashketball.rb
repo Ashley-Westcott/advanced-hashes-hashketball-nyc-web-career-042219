@@ -210,4 +210,23 @@ def player_numbers(team_name)
   jersey_num_array
 end
 
+def player_stats(player_name)
+  game_hash.each do | team, team_data_hash |
+    team_data_hash.each do | attribute, data |
+      if attribute == :players
+        data.each do | player, player_data_hash |
+          if player == player_name
+            return player_data_hash
+          end
+        end
+      end
+    end
+  end
+end
+    
+        
+        
+        
+        
+        
      
