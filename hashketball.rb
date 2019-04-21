@@ -125,10 +125,7 @@ end
 
 
 def num_points_scored(name)
-  if name == players
-    put game_hash.each []
-    
-    var = 0
+  points = 0
   game_hash.each do | teams, team_data |
   team_data.each do | attributes , names |
     if attributes == :players
